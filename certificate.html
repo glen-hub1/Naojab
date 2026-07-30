@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Completion | The New Generation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .certificate-container {
+            max-width: 1000px;
+            margin: 120px auto 60px;
+            padding: 20px;
+        }    .certificate {
+        background: linear-gradient(145deg, #071427, #0b1f3a);
+        border: 2px solid #38bdf8;
+        border-radius: 24px;
+        padding: 50px 30px;
+        text-align: center;
+        box-shadow: 0 0 30px rgba(56,189,248,0.35);
+    }
+
+    .certificate h1 {
+        font-size: 3rem;
+        color: #38bdf8;
+        text-shadow: 0 0 20px #38bdf8;
+        margin-bottom: 20px;
+    }
+
+    .certificate h2 {
+        color: #ffffff;
+        margin: 20px 0;
+        font-size: 2rem;
+    }
+
+    .certificate p {
+        color: #dbeafe;
+        line-height: 1.8;
+        margin: 12px 0;
+    }
+
+    .student-name {
+        font-size: 2rem;
+        color: #ffffff;
+        border-bottom: 2px solid #38bdf8;
+        display: inline-block;
+        padding: 10px 30px;
+        margin: 25px 0;
+        min-width: 320px;
+    }
+
+    .certificate-actions {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .certificate-actions input {
+        padding: 12px 16px;
+        border-radius: 12px;
+        border: 1px solid #38bdf8;
+        background: #071427;
+        color: #ffffff;
+        min-width: 260px;
+    }
+
+    .signature-row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .signature {
+        flex: 1;
+        min-width: 220px;
+        border-top: 2px solid #38bdf8;
+        padding-top: 10px;
+        color: #dbeafe;
+    }
+
+    .certificate-footer {
+        margin-top: 30px;
+        color: #cbd5e1;
+        font-size: 0.95rem;
+    }
+
+    @media print {
+        body {
+            background: white;
+        }
+
+        header, footer, .certificate-actions {
+            display: none !important;
+        }
+
+        .certificate-container {
+            margin: 0;
+            max-width: 100%;
+        }
+
+        .certificate {
+            box-shadow: none;
+            border: 2px solid #0ea5e9;
+        }
+    }
+</style>
+
+</head>
+<body><header>
+    <nav class="navbar">
+        <div class="logo">The New Generation</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#course">Chapters</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header><div class="certificate-container"><div class="certificate">
+
+    <h1>Certificate of Completion</h1>
+
+    <p>This certificate is proudly presented to</p>
+
+    <div id="certificate-name" class="student-name">
+        Your Name Here
+    </div>
+
+    <p>for successfully completing the course</p>
+
+    <h2>The New Generation: Challenges, Survival, and Growth</h2>
+
+    <p>
+        This certificate recognizes dedication, learning, personal growth,
+        and commitment to understanding the challenges of the modern generation.
+    </p>
+
+    <div class="certificate-actions">
+
+        <input
+            type="text"
+            id="name-input"
+            placeholder="Enter your full name"
+        >
+
+        <button class="btn primary" onclick="updateCertificateName()">
+            Apply Name
+        </button>
+
+        <button class="btn secondary" onclick="downloadCertificate()">
+            Download Certificate
+        </button>
+
+    </div>
+
+    <div class="signature-row">
+
+        <div class="signature">
+            <strong>Elijah Ombogo Ondieki</strong><br>
+            Course Author
+        </div>
+
+        <div class="signature">
+            <strong>Date</strong><br>
+            <span id="certificate-date"></span>
+        </div>
+
+    </div>
+
+    <div class="certificate-footer">
+        Kenya Highlands University • Kisii, Kenya
+    </div>
+
+</div>
+
+</div><footer>
+    <p>© 2026 Elijah Ombogo Ondieki. All rights reserved.</p>
+</footer><script>
+    function updateCertificateName() {
+        const input = document.getElementById('name-input').value.trim();
+
+        if (input !== '') {
+            document.getElementById('certificate-name').textContent = input;
+            localStorage.setItem('certificateName', input);
+        }
+    }
+
+    function downloadCertificate() {
+        window.print();
+    }
+
+    const savedName = localStorage.getItem('certificateName');
+
+    if (savedName) {
+        document.getElementById('certificate-name').textContent = savedName;
+        document.getElementById('name-input').value = savedName;
+    }
+
+    const today = new Date();
+
+    document.getElementById('certificate-date').textContent =
+        today.toLocaleDateString();
+</script><script src="script.js"></script></body>
+</html>
