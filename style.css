@@ -1,0 +1,214 @@
+/* =======================================
+The New Generation - Premium Neon Style
+By Elijah Ombogo Ondieki
+======================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, sans-serif;
+background: #020617;
+color: #ffffff;
+overflow-x: hidden;
+}
+
+/* Navbar */
+header {
+position: sticky;
+top: 0;
+z-index: 1000;
+background: rgba(2,6,23,0.8);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid rgba(56,189,248,0.4);
+}
+
+.navbar {
+max-width: 1100px;
+margin: auto;
+padding: 18px 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 15px;
+}
+
+.logo {
+color: #38bdf8;
+font-size: 2rem;
+font-weight: bold;
+text-shadow: 0 0 20px #38bdf8;
+}
+
+.nav-links {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 18px;
+list-style: none;
+}
+
+.nav-links a {
+color: #ffffff;
+text-decoration: none;
+font-size: 1.1rem;
+transition: 0.3s;
+}
+
+.nav-links a:hover {
+color: #38bdf8;
+text-shadow: 0 0 12px #38bdf8;
+}
+
+/* Hero */
+.hero {
+text-align: center;
+padding: 70px 20px;
+}
+
+.hero h1 {
+font-size: 3rem;
+color: #38bdf8;
+text-shadow: 0 0 20px #38bdf8;
+}
+
+.hero h2 {
+margin-top: 15px;
+font-size: 1.8rem;
+}
+
+.hero p {
+margin-top: 15px;
+color: #dbeafe;
+}
+
+/* Buttons */
+.hero-buttons {
+margin-top: 25px;
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+.btn {
+padding: 12px 22px;
+border-radius: 999px;
+text-decoration: none;
+font-weight: bold;
+transition: 0.3s;
+}
+
+.primary {
+background: #0ea5e9;
+color: #02131f;
+box-shadow: 0 0 18px #0ea5e9;
+}
+
+.secondary {
+border: 1px solid #38bdf8;
+color: #38bdf8;
+}
+
+/* Sections */
+.section {
+max-width: 1100px;
+margin: auto;
+padding: 70px 20px;
+}
+
+.section h2 {
+text-align: center;
+color: #38bdf8;
+font-size: 2.2rem;
+margin-bottom: 25px;
+text-shadow: 0 0 15px #38bdf8;
+}
+
+/* Glass cards */
+.glass-card,
+.support-box,
+.contact-box {
+background: rgba(7,20,39,0.7);
+border: 1px solid rgba(56,189,248,0.35);
+border-radius: 22px;
+padding: 25px;
+box-shadow: 0 0 20px rgba(14,165,233,0.2);
+}
+
+/* Chapter grid */
+.chapters {
+display: grid;
+grid-template-columns: 1fr;
+gap: 22px;
+}
+
+/* Chapter card */
+.chapter-card {
+display: block;
+background: rgba(7,20,39,0.75);
+border: 1px solid rgba(56,189,248,0.35);
+border-radius: 22px;
+padding: 26px;
+color: #ffffff;
+text-decoration: none;
+font-size: 1.15rem;
+font-weight: bold;
+transition: 0.35s;
+box-shadow: 0 0 20px rgba(14,165,233,0.18);
+}
+
+.chapter-card:hover {
+transform: translateY(-6px);
+border-color: #38bdf8;
+box-shadow: 0 0 28px rgba(56,189,248,0.45);
+color: #38bdf8;
+}
+
+/* Remove purple visited links */
+.chapter-card:visited {
+color: #ffffff;
+}
+
+.chapter-card:hover:visited {
+color: #38bdf8;
+}
+
+/* Footer */
+footer {
+text-align: center;
+padding: 30px;
+color: #cbd5e1;
+border-top: 1px solid rgba(56,189,248,0.35);
+}
+
+/* Light mode */
+.light-mode {
+background: #f8fbff;
+color: #03111f;
+}
+
+/* Mobile */
+@media (max-width:768px) {
+.logo {
+font-size: 1.8rem;
+text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+}
+
+.hero h2 {
+    font-size: 1.4rem;
+}
+
+.chapter-card {
+    font-size: 1.05rem;
+    padding: 22px;
+}
+
+  }
